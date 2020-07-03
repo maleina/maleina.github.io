@@ -42,7 +42,7 @@ a:hover {
   
 #projects {
   min-height: 100vh;
-  padding: 10vh 0;
+  padding: 10vh 10vw;
 }
 
 .project-tile {
