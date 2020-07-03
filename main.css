@@ -13,13 +13,12 @@ body {
 
 nav {
   position: fixed;
-  text-align: right;  
   width: 100%;
   background-color: #f7e6ea;
 }
 
 li {
-  display: inline-block;
+  display: block;
   margin: 20px;
   margin-bottom: 15px;
   margin-top: 25px;
@@ -42,7 +41,7 @@ a:hover {
 }
   
 #projects {
-  min-height: 55vh;
+  min-height: 100vh;
   padding: 10vh 0;
 }
 
@@ -87,11 +86,14 @@ a:hover {
   border-radius: 50%;
 }
 
-  @media (max-width: 650px) {
+  @media (min-width: 650px) {
 
-  li {
-    text-align: center;
-    margin-right: 90px;
-    margin-left:-10px;
+    li {
+      display: inline-block;
+    }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
     }
   }
