@@ -74,6 +74,7 @@ a:hover {
   animation: fade-slide-up 1s 1s ease-out forwards,
              pulse 2s 3s ease-out infinite;
   opacity: 0;
+  color: black;
 }
 
 #projects {
