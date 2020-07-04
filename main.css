@@ -40,7 +40,42 @@ a:hover {
   min-height: 55vh;
   padding-top: 45vh;
 }
-  
+
+/* Hat tip for animations to https://cssanimation.rocks/scroll-cue/ */
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  50% {
+    opacity: .8;
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.chevron {
+  display: inline-block;
+  font-size: 2rem;
+  animation: fade-slide-up 1s 1s ease-out forwards,
+             pulse 2s 3s ease-out infinite;
+  opacity: 0;
+}
+
 #projects {
   min-height: 100vh;
   padding: 10vh 10vw;
