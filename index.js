@@ -51,7 +51,7 @@ function getActiveSection() {
 			if (isInViewport(section)) {
 				section.classList.add('active-section');
                 currMenuLink.classList.add('menu__link-active');
-                window.location.hash = `#${section.id}`;
+                /*window.location.hash = `#${section.id}`;*/
 			}
 			else {
 				section.classList.remove('active-section');
