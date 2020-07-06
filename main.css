@@ -121,15 +121,27 @@ a:hover {
   padding-top: 45vh;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .contact-container {
-  margin-top: -2rem;
+  margin: -2rem 2rem 5rem 2rem;
+  display: inline-block;
 }
 
 .contact-img {
-  height: 12.5rem;
-  width: 12.5rem;
+  height: 10rem;
+  width: 10rem;
   background-size: cover;
   border-radius: 50%;
+}
+
+.li-icon {
+font-size: 10rem;
+color: #2867B2;
 }
 
   @media (min-width: 40.5rem) {
@@ -141,5 +153,9 @@ a:hover {
   nav {
     display: flex;
     justify-content: flex-end;
+    }
+
+    .contact {
+      flex-direction: row;
     }
   }
