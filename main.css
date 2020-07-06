@@ -110,6 +110,10 @@ a:hover {
   font-weight: bold;
 }
 
+.project__live {
+  color: red;
+}
+
 #contact {
   top: 0;
   background: #f7e6ea;
