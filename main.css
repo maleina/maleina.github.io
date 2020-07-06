@@ -144,6 +144,12 @@ font-size: 10rem;
 color: #2867B2;
 }
 
+.menu__link-active {
+    color: black;
+    font-weight: bold;
+}
+
+
   @media (min-width: 40.5rem) {
 
     .navbar-item {
