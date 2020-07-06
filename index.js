@@ -18,7 +18,7 @@
  *
 */
 const sections = document.querySelectorAll('section');
-const menuList = document.querySelector('navbar');
+const menuList = document.querySelector('#navbar');
 
 /**
  * End Global Variables
@@ -48,19 +48,28 @@ function getActiveSection() {
 	window.addEventListener('scroll', event => {
 		for (section of sections){
             const currMenuLink = document.querySelector(`a[href="#${section.getAttribute("id")}"]`);
-            console.log(currMenuLink);
 			if (isInViewport(section)) {
 				section.classList.add('active-section');
-				currMenuLink.classList.add('menu__link-active');
+                currMenuLink.classList.add('menu__link-active');
+                window.location.hash = `#${section.id}`;
 			}
 			else {
 				section.classList.remove('active-section');
-				currMenuLink.classList.remove('menu__link-active');
+                currMenuLink.classList.remove('menu__link-active');
 			}
 		}
 	});
 }
 
+// Scroll to appropriate anchor ID
+function scrollToSection() {
+	menuList.addEventListener('click', event => {
+		event.preventDefault();
+		document.querySelector(event.toElement.hash).scrollIntoView({
+            behavior: 'smooth'
+        });
+	});
+}
 
 /**
  * End Main Functions
@@ -68,5 +77,7 @@ function getActiveSection() {
  *
 */
 
+// Scroll to section upon navigation link click
+scrollToSection();
 // Set sections as active
 setTimeout(getActiveSection, 0);
