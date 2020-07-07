@@ -19,6 +19,7 @@
 */
 const sections = document.querySelectorAll('section');
 const menuList = document.querySelector('#navbar');
+const chevron = document.querySelector('#chevron');
 
 /**
  * End Global Variables
@@ -66,6 +67,12 @@ function scrollToSection() {
 	menuList.addEventListener('click', event => {
 		event.preventDefault();
 		document.querySelector(event.toElement.hash).scrollIntoView({
+            behavior: 'smooth'
+        });
+	});
+	chevron.addEventListener('click', event => {
+		event.preventDefault();
+		document.querySelector(event.target.parentNode.hash).scrollIntoView({
             behavior: 'smooth'
         });
 	});

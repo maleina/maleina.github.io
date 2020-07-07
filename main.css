@@ -68,7 +68,7 @@ a:hover {
   }
 }
 
-.chevron {
+#chevron {
   display: inline-block;
   font-size: 2rem;
   animation: fade-slide-up 1s 1s ease-out forwards,
