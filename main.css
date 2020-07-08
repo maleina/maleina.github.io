@@ -132,7 +132,8 @@ nav {
   top: 0;
   background: #f7e6ea;
   min-height: 55vh;
-  padding-top: 45vh;
+  padding-top: 40vh;
+  padding-bottom: 5rem;
 }
 
 .contact-container {
@@ -157,15 +158,17 @@ color: #2867B2;
     font-weight: bold;
 }
 
-
   @media (min-width: 40.5rem) {
+    #navbar {
+      margin-right: 2rem;
+    }
 
     .navbar-item {
       display: inline-block;
     }
 
-  nav {
-    display: flex;
-    justify-content: flex-end;
+    nav {
+      display: flex;
+      justify-content: flex-end;
     }
   }
