@@ -66,9 +66,11 @@ function getActiveSection() {
 function scrollToSection() {
 	menuList.addEventListener('click', event => {
 		event.preventDefault();
-		document.querySelector(event.toElement.hash).scrollIntoView({
-            behavior: 'smooth'
-        });
+		if (event.toElement.hash != null){
+			document.querySelector(event.toElement.hash).scrollIntoView({
+				behavior: 'smooth'
+			});
+		}
 	});
 	chevron.addEventListener('click', event => {
 		event.preventDefault();
