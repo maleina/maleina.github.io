@@ -11,7 +11,7 @@ body {
   font-family: 'Lato', sans-serif;
   text-align: center;
   background-color: #f9f2f4;
-  
+
 }
 
 a {
@@ -69,18 +69,18 @@ nav {
   padding-top: 45vh;
 }
 
-#chevron {
+#projects, #projects2 {
+  min-height: 100vh;
+  padding: 10vh 10vw;
+}
+
+.chevron {
   display: inline-block;
   font-size: 2rem;
   animation: fade-slide-up 1s 1s ease-out forwards,
              pulse 2s 3s ease-out infinite;
   opacity: 0;
   color: black;
-}
-
-#projects, #projects2 {
-  min-height: 100vh;
-  padding: 10vh 10vw;
 }
 
 .project-tile {
