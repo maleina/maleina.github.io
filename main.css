@@ -78,7 +78,7 @@ nav {
   color: black;
 }
 
-#projects {
+#projects, #projects2 {
   min-height: 100vh;
   padding: 10vh 10vw;
 }
