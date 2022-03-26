@@ -1,10 +1,5 @@
 /**
  *
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- *
  * Dependencies: None
  *
  * JS Version: ES2015/ES6
@@ -28,7 +23,7 @@ const chevron = document.querySelector('#chevron');
 */
 
 // Determine if the section is near the top the viewport
-// For our purposes, it must lie in the top half of the screen. May have to adjust in the future as needed.
+// It must lie in the top half of the screen. May have to adjust in the future as needed.
 function isInViewport(element) {
     const bounding = element.getBoundingClientRect();
     return (
@@ -66,18 +61,22 @@ function getActiveSection() {
 function scrollToSection() {
 	menuList.addEventListener('click', event => {
 		event.preventDefault();
-		if (event.toElement.hash != null){
-			document.querySelector(event.toElement.hash).scrollIntoView({
+		if (event.target.hash != null){
+			document.querySelector(event.target.hash).scrollIntoView({
 				behavior: 'smooth'
 			});
 		}
 	});
-	chevron.addEventListener('click', event => {
-		event.preventDefault();
-		document.querySelector(event.target.parentNode.hash).scrollIntoView({
-            behavior: 'smooth'
-        });
-	});
+    if (chevron != null){
+    chevron.addEventListener('click', event => {
+        event.preventDefault();
+        if (event.target.parentNode.hash != null){
+            document.querySelector(event.target.parentNode.hash).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+}
 }
 
 /**
