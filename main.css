@@ -64,7 +64,14 @@ nav {
 
 #welcome-section {
   top: 0;
-  background: #f7e6ea;
+  font-family: 'Parisienne', cursive;
+  /*color: darkred;*/
+  font-size: xx-large;
+  background-image: url("assets/images/rinck-content-studio-RTdRHgyGiiw-unsplash.jpg");
+  background-color: #f7e6ea;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 55vh;
   padding-top: 45vh;
 }
